@@ -7,8 +7,9 @@ Este é um repositório dedicado ao estudo da linguagem de programação Go. Aqu
 - [Sobre a Linguagem Go](#sobre-a-linguagem-go)
 - [Instalação (Linux)](#instalação-linux)
 - [Módulos e Pacotes do Go](#módulos-e-pacotes-do-go)
-- [Comandos Básicos do Go](#comandos-básicos-do-go)
+  - [Pacotes externos](#pacotes-externos)
 - [Go Workspaces](#go-workspaces)
+- [Comandos Básicos do Go](#comandos-básicos-do-go)
 - [Referências](#referências)
 
 ---
@@ -20,6 +21,8 @@ Go, também chamado de Golang, é uma linguagem de programação *open source* d
 O Go é estaticamente tipado, explícito e modelado com base na linguagem de programação C. Devido ao rápido tempo de inicialização, baixa sobrecarga em tempo de execução e capacidade de rodar sem uma máquina virtual (VM), a linguagem Go se tornou muito popular para escrever microsserviços e outros usos. Além disso, o Go é utilizado para programação concorrente — uma estratégia para executar múltiplas tarefas ao mesmo tempo, fora de ordem ou em ordem parcial.
 
 A linguagem Go foi inspirada pela produtividade e relativa simplicidade do Python. Ela utiliza goroutines, ou processos leves, e uma coleção de pacotes para gerenciamento eficiente de dependências. Foi projetada para resolver diversos problemas, incluindo tempo lento de compilação, dependências descontroladas, duplicação de esforço, dificuldade na criação de ferramentas automáticas e desenvolvimento entre diferentes linguagens.
+
+---
 
 ## Instalação (Linux)
 
@@ -57,31 +60,26 @@ export PATH=$PATH:/usr/local/go/bin
 go version
 ```
 
+---
+
 ## Módulos e Pacotes do Go
 
 Go possui um sistema de gerenciamento de dependências integrado chamado de módulos. Módulos permitem que você organize e gerencie as dependências do seu projeto de forma eficiente.
 
+### Pacotes externos
 
-## Comandos Básicos do Go
+Para importar e utilizar pacotes de terceiros, primeiro procure pelo pacote em [pkg.go.dev](https://pkg.go.dev), importe o pacote no código com:
 
-Aqui estão alguns comandos básicos que você usará frequentemente ao trabalhar com Go:
-
-- Crie um novo módulo:
-
-```shell
-go mod init nome-do-modulo
+```go
+import "external/package/name"
 ```
 
-- Compilar um projeto/script:
+*Substitua "external/package/name" pelo nome do pacote.
+
+E, finalmente, atualize as dependências do seu módulo com:
 
 ```shell
-go build
-```
-
-- Executar um projeto/script:
-
-```shell
-go run <filepath/projectpath>
+go mod tidy
 ```
 
 ---
@@ -106,6 +104,30 @@ Então você consegue executar o arquivo `hello.go` no diretório do workspace c
 
 ```shell
 go run ./hello
+```
+
+---
+
+## Comandos Básicos do Go
+
+Aqui estão alguns comandos básicos que você usará frequentemente ao trabalhar com Go:
+
+- Crie um novo módulo:
+
+```shell
+go mod init nome-do-modulo
+```
+
+- Compilar um projeto/script:
+
+```shell
+go build
+```
+
+- Executar um projeto/script:
+
+```shell
+go run <filepath/projectpath>
 ```
 
 ---
