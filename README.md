@@ -8,6 +8,7 @@ Este é um repositório dedicado ao estudo da linguagem de programação Go. Aqu
 - [Instalação (Linux)](#instalação-linux)
 - [Módulos e Pacotes do Go](#módulos-e-pacotes-do-go)
 - [Comandos Básicos do Go](#comandos-básicos-do-go)
+- [Go Workspaces](#go-workspaces)
 - [Referências](#referências)
 
 ---
@@ -81,6 +82,30 @@ go build
 
 ```shell
 go run <filepath/projectpath>
+```
+
+---
+
+## Go Workspaces
+
+Com espaços de trabalho de vários módulos &ndash; *multi-module workspaces* &ndash; você pode informar ao comando Go que está escrevendo código em vários módulos ao mesmo tempo e facilmente construir e executar código nesses módulos.
+
+Você pode inicializer um workspace com:
+
+```shell
+go work init
+```
+
+Para usar um módulo específico dentro do workspace, como o *hello*, por exemplo, faça:
+
+```shell
+go work use hello
+```
+
+Então você consegue executar o arquivo `hello.go` no diretório do workspace com:
+
+```shell
+go run ./hello
 ```
 
 ---
