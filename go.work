@@ -1,3 +1,7 @@
 go 1.21.0
 
-use ./hello
+use (
+	./caller
+	./greetings
+	./hello
+)
