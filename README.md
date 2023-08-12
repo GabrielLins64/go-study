@@ -130,6 +130,12 @@ go build
 go run <filepath/projectpath>
 ```
 
+- Rodar testes:
+
+```shell
+go test
+```
+
 ---
 
 ## Referências
