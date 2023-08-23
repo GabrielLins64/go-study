@@ -16,7 +16,9 @@ import (
 	"fmt"
 )
 
-func main() {}
+func main() {
+	
+}
 `
 
 func main() {
@@ -50,7 +52,7 @@ func main() {
 
 	// Create the Go file inside the new directory
 	goFilePath := filepath.Join(newDir, newDir+".go")
-	err = ioutil.WriteFile(goFilePath, []byte(fmt.Sprintf(templateContent, newDirName)), 0644)
+	err = ioutil.WriteFile(goFilePath, []byte(templateContent), 0644)
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
