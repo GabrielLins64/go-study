@@ -4,4 +4,5 @@ use (
 	./caller
 	./greetings
 	./hello
+	./tutorial_golang_yt
 )
