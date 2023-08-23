@@ -143,3 +143,5 @@ go test
 [1] https://www.techtarget.com/
 
 [2] https://go.dev/doc/
+
+[3] https://www.codigofluente.com.br/
