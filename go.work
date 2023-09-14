@@ -2,6 +2,7 @@ go 1.21.0
 
 use (
 	./caller
+	./go_quizzes
 	./greetings
 	./hello
 	./tutorial_golang_yt
