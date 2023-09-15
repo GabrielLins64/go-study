@@ -5,7 +5,7 @@ import "fmt"
 
 func SliceTwo() {
 	fmt.Println("\nSlice 2")
-	
+
 	var x = []string{"A", "B", "C"}
 	var size = len(x);
 

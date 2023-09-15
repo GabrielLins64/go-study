@@ -10,4 +10,7 @@ func main()  {
 
 	slice.SliceTwo();
 	// Answer: 0A,1M,2C,
+
+	slice.SliceThree();
+	// Answer: [7 0 5 6]
 }
