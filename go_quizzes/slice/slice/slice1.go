@@ -1,10 +1,11 @@
 package slice
 
-
 import "fmt"
 
 
 func SliceOne() {
+	fmt.Println("Slice 1")
+
 	// We can infer the array length when using array literals with the ellipses ... operator.
 	a := [...]int{0, 1, 2, 3}
 	// Initially, the slice y is [2 3], and the slice x is [0] with three free element slots (in other words, its capacity is 4),
